@@ -58,13 +58,13 @@ function extend(obj) {
  *
  * Example:
  *
- *   var Platypus = compose(Duck, Beaver)
+ *   var Platypus = compile(Duck, Beaver)
  *
  * @param {...} Objects to combine
  * @returns {Object} combined result
  */
 
-function compose() {
+function compile() {
   var args = slice.call(arguments, 0)
     , proto = {}
 
@@ -96,7 +96,7 @@ function compose() {
  * @param {Object} options hash
  */
 
-compose.config = function(source) {
+compile.config = function(source) {
   extend(options, source)
 }
 
@@ -105,9 +105,9 @@ compose.config = function(source) {
  */
 
 if (typeof exports !== 'undefined') {
-  module.exports = compose
+  module.exports = compile
 } else {
-  root.compose = compose
+  root.compile = compile
 }
 
 }).call(this);

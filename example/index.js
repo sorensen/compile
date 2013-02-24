@@ -1,5 +1,5 @@
 
-var compose = require('../index')
+var compile = require('../index')
 
 function Duck() {
   this.bird = true
@@ -15,11 +15,11 @@ Beaver.prototype.tail = function() {
   return 'slap'
 }
 
-var Platypus = compose(Duck, Beaver)
+var Platypus = compile(Duck, Beaver)
 
 
 module.exports.animal = Platypus
 
-var API = compose.dir(__dirname, __filename)
+var API = compile.dir(__dirname, __filename)
 
 module.exports.API = API

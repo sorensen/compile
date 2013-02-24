@@ -25,7 +25,7 @@ var compile = require('compile')
 Browser
 
 ``` html
-<script src="compiled.min.js"></script>
+<script src="compile.min.js"></script>
 ```
 
 

@@ -11,7 +11,7 @@
 
 var slice = Array.prototype.slice
   , toString = Object.prototype.toString
-  , compose = require('./compose')
+  , compile = require('./compile')
   , fs = require('fs')
   , path = require('path')
 
@@ -21,14 +21,14 @@ var slice = Array.prototype.slice
  *
  * Example:
  *
- *   var API = compose.dir(__dirname, __filename)
+ *   var API = compile.dir(__dirname, __filename)
  *
  * @param {String} target directory (example: `__dirname`)
  * @param {String} file to exclude (example: `index.js`)
- * @returns {Object} compose result
+ * @returns {Object} compile result
  */
 
-compose.dir = function(directory, exclude) {
+compile.dir = function(directory, exclude) {
   var files = fs.readdirSync(directory)
     , args = [], file, full, obj
 
@@ -49,11 +49,11 @@ compose.dir = function(directory, exclude) {
     obj && args.push(obj)
   }
   // Compile all found objects
-  return compose.apply(null, args)
+  return compile.apply(null, args)
 }
 
 /*!
  * Module exports.
  */
 
-module.exports = compose
+module.exports = compile

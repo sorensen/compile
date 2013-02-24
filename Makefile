@@ -9,7 +9,7 @@ hint:
 
 # UglifyJS v1.3.4
 min:
-	@echo -n ';' > compose.min.js; uglifyjs -nc compose.js >> compose.min.js;
+	@echo -n ';' > compile.min.js; uglifyjs -nc compile.js >> compile.min.js;
 
 all:
 	make hint;
