@@ -37,10 +37,14 @@ Methods
 Combines any number of functions passed into a single function
 
 ``` js
-function Red() {}
-function Blue() {}
+function Red() { this.bar = 1 }
+function Blue() { this.foo = 2 }
 
 var Purple = compile(Red, Blue)
+var purp = new Purple()
+
+purp.bar // 1
+purp.foo // 2
 ```
 
 ### compile.setup(options)
