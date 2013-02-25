@@ -1,8 +1,8 @@
 
-Compiled
-========
+Compile
+=======
 
-[![Build Status](https://secure.travis-ci.org/sorensen/compiled.png)](http://travis-ci.org/sorensen/compiled) 
+[![Build Status](https://secure.travis-ci.org/sorensen/compile.png)](http://travis-ci.org/sorensen/compile) 
 
 Class / function composition library, combines all static and prototype methods
 into a single function, constructors are also chained and will be ran in the 
