@@ -2,7 +2,7 @@
  * (c) 2012 Beau Sorensen
  * MIT Licensed
  * For all details and documentation:
- * https://github.com/sorensen/defined-args
+ * https://github.com/sorensen/compile
  */
 
 ;(function() {
